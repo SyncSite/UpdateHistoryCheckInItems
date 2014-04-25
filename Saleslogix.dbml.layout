@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 18.5" name="Saleslogix">
+  <DataContextMoniker Name="/SaleslogixDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c8c0b0ec-cf24-4065-8a5b-6c3837cb5a6f" absoluteBounds="7.75, 1.25, 2, 9.0783512369791648">
+      <DataClassMoniker Name="/SaleslogixDataContext/HISTORY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9468504c-67dc-4c5d-a7da-e978f80e62ed" absoluteBounds="7.765, 1.71, 1.9700000000000002, 8.5183512369791661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5d52067f-9c81-4c4e-bff4-775e0819c843" absoluteBounds="4.375, 1.125, 2, 17.155011393229167">
+      <DataClassMoniker Name="/SaleslogixDataContext/ACCOUNT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8640b7c4-72f2-4aca-8b04-771c3a3fd675" absoluteBounds="4.39, 1.585, 1.9700000000000002, 16.595011393229164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c6776a04-fa53-450a-9416-ac636160f47f" absoluteBounds="1.75, 1.25, 2, 6.5784326171875">
+      <DataClassMoniker Name="/SaleslogixDataContext/ADDRESS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40dce2e3-d2d9-448d-b495-860c684abec2" absoluteBounds="1.7650000000000001, 1.71, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.75 : 4.53921630859375); (4.375 : 4.53921630859375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SaleslogixDataContext/ADDRESS/ADDRESS_ACCOUNT" />
+      <nodes>
+        <classShapeMoniker Id="c6776a04-fa53-450a-9416-ac636160f47f" />
+        <classShapeMoniker Id="5d52067f-9c81-4c4e-bff4-775e0819c843" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.375 : 5.78917561848958); (7.75 : 5.78917561848958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SaleslogixDataContext/ACCOUNT/ACCOUNT_HISTORY" />
+      <nodes>
+        <classShapeMoniker Id="5d52067f-9c81-4c4e-bff4-775e0819c843" />
+        <classShapeMoniker Id="c8c0b0ec-cf24-4065-8a5b-6c3837cb5a6f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

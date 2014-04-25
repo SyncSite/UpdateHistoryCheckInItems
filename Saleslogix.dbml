@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Richie" Class="SaleslogixDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost\Saleslogix;Initial Catalog=Richie;User ID=sysdba" SettingsObjectName="UpdateHistoryCheckInItems.Properties.Settings" SettingsPropertyName="RichieConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="sysdba.HISTORY" Member="HISTORies">
+    <Type Name="HISTORY">
+      <Column Name="HISTORYID" Type="System.String" DbType="Char(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ACTIVITYID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACCOUNTID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="CONTACTID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="OPPORTUNITYID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="ACCOUNTNAME" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="CONTACTNAME" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="OPPORTUNITYNAME" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="PRIORITY" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="CATEGORY" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="STARTDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DURATION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="PROCESSID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="PROCESSNODE" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="TIMELESS" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="RECURRING" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ACTIVITYBASEDON" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="USERID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="ORIGINALDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RESULT" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="RESULTCODE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="CREATEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATEUSER" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="MODIFYDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFYUSER" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="COMPLETEDDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="COMPLETEDUSER" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="NOTES" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="LONGNOTES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ATTACHMENT" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="USERDEF1" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="USERDEF2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="USERDEF3" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TICKETID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="LEADID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="TICKETNUMBER" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="LEADNAME" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="ATTACHMENTCOUNT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LONGITUDE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LATITUDE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="ACCOUNT_HISTORY" Member="ACCOUNT" ThisKey="ACCOUNTID" OtherKey="ACCOUNTID" Type="ACCOUNT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="sysdba.ACCOUNT" Member="ACCOUNTs">
+    <Type Name="ACCOUNT">
+      <Column Name="ACCOUNTID" Type="System.String" DbType="Char(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TYPE" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="ACCOUNT" Member="ACCOUNT1" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="DIVISION" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="SICCODE" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="PARENTID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="ADDRESSID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="SHIPPINGID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="REGION" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="MAINPHONE" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="ALTERNATEPHONE" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="FAX" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="TOLLFREE" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="TOLLFREE2" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="OTHERPHONE1" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="OTHERPHONE2" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="OTHERPHONE3" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="EMAILTYPE" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="WEBADDRESS" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="SECCODEID" Type="System.String" DbType="Char(12) NOT NULL" CanBeNull="false" />
+      <Column Name="REVENUE" Type="System.Decimal" DbType="Decimal(17,4)" CanBeNull="true" />
+      <Column Name="EMPLOYEES" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="INDUSTRY" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="CREDITRATING" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NOTES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="ACCOUNTMANAGERID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="REGIONALMANAGERID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="DIVISIONALMANAGERID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="NATIONALACCOUNT" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="TARGETACCOUNT" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="TERRITORY" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="CREATEUSER" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="MODIFYUSER" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="CREATEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFYDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ACCOUNT_UC" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="AKA" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="CURRENCYCODE" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="INTERNALACCOUNTNO" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="EXTERNALACCOUNTNO" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="PARENTACCOUNTNO" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="ALTERNATEKEYPREFIX" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ALTERNATEKEYSUFFIX" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="DEFAULTTICKETSECCODEID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="NOTIFYDEFECTS" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="NOTIFYONCLOSE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="NOTIFYONSTATUS" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="SHORTNOTES" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="USERFIELD1" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="USERFIELD2" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="USERFIELD3" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="USERFIELD4" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="USERFIELD5" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="USERFIELD6" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="USERFIELD7" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="USERFIELD8" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="USERFIELD9" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="USERFIELD10" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="CAMPAIGNID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="DONOTSOLICIT" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="SCORE" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="TICKER" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="SUBTYPE" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="LEADSOURCEID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="IMPORTSOURCE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="ENGINEERID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="SALESENGINEERID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="RELATIONSHIP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LASTHISTORYBY" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="LASTHISTORYDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BUSINESSDESCRIPTION" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="WEBADDRESS2" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="WEBADDRESS3" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="WEBADDRESS4" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="GLOBALSYNCID" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
+      <Column Name="APPID" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="TICK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LASTERPSYNCUPDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PRIMARYOPERATINGCOMPID" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="PROMOTEDTOACCOUNTING" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="CREATESOURCE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HOTNOTES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ACCOUNT_HISTORY" Member="HISTORies" ThisKey="ACCOUNTID" OtherKey="ACCOUNTID" Type="HISTORY" />
+      <Association Name="ADDRESS_ACCOUNT" Member="ADDRESS" ThisKey="ADDRESSID" OtherKey="ADDRESSID" Type="ADDRESS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="sysdba.ADDRESS" Member="ADDRESSes">
+    <Type Name="ADDRESS">
+      <Column Name="ADDRESSID" Type="System.String" DbType="Char(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ENTITYID" Type="System.String" DbType="Char(12) NOT NULL" CanBeNull="false" />
+      <Column Name="TYPE" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="ADDRESS1" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="ADDRESS2" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="CITY" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="STATE" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="POSTALCODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="COUNTY" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="COUNTRY" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="ISPRIMARY" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ISMAILING" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="SALUTATION" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="CREATEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATEUSER" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="MODIFYDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFYUSER" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="ROUTING" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="ADDRESS3" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="ADDRESS4" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="TIMEZONE" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="ERPNAME" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="TICK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="APPID" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="GLOBALSYNCID" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
+      <Column Name="LONGITUDE" Type="System.Decimal" DbType="Decimal(18,10)" CanBeNull="true" />
+      <Column Name="LATITUDE" Type="System.Decimal" DbType="Decimal(18,10)" CanBeNull="true" />
+      <Column Name="ADDRESSTYPE" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="PRIMARYADDRESS" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="ADDRESS_ACCOUNT" Member="ACCOUNTs" ThisKey="ADDRESSID" OtherKey="ADDRESSID" Type="ACCOUNT" />
+    </Type>
+  </Table>
+  <Function Name="dbo.fnGetDistance" Method="fnGetDistance" IsComposable="true">
+    <Parameter Name="Lat1" Parameter="lat1" Type="System.Single" DbType="Real" />
+    <Parameter Name="Long1" Parameter="long1" Type="System.Single" DbType="Real" />
+    <Parameter Name="Lat2" Parameter="lat2" Type="System.Single" DbType="Real" />
+    <Parameter Name="Long2" Parameter="long2" Type="System.Single" DbType="Real" />
+    <Parameter Name="ReturnType" Parameter="returnType" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Single" />
+  </Function>
+</Database>
